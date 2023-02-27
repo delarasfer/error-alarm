@@ -25,7 +25,7 @@ var array = Array.from(Array(200).keys()); //Iterates 200 times to check algorit
 var promise = Promise.resolve();
 array.forEach((i) => {
   promise = promise.then(() => {
-    logError('Error nbr: '+(i+1));  // This represent how exiting code doesn't detects the change made
+    logError('Error nbr: '+(i+1));  // This represent how existing code doesn't detects the change made
     return wait(((i+1) % 20 == 0) ? 50000 : 2000); //Every 20 errors wait 50 secs before resuming 2 secs
   });
 });
